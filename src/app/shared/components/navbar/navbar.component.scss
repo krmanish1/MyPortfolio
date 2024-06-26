@@ -1,0 +1,101 @@
+.animated-gradient-text {
+    display: inline-block;
+    padding: 10px;
+    /* Adjust as needed */
+    background-size: 200% auto;
+    /* Double the size of the background image */
+    background-image: linear-gradient(to right, #4D5BCE, #43D9AD, #FEA55F);
+    /* Updated gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 2px solid;
+    border-image: linear-gradient(to right, #4D5BCE, #43D9AD, #FEA55F);
+    border-radius: 24px;
+    padding: 8 8px;
+    /* White border */
+    box-decoration-break: clone;
+    /* Ensures the border follows the text */
+    -webkit-box-decoration-break: clone;
+    /* For WebKit browsers */
+
+    /* Animation */
+    animation: Gradient 3s ease infinite;
+}
+
+@keyframes Gradient {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+
+.moving-gradient-button {
+    display: inline-block;
+    padding: 10px 20px;
+    /* Adjust as needed */
+    background-size: 200% auto;
+    /* Double the size of the background image */
+    background-image: linear-gradient(to right, #4D5BCE, #43D9AD, #FEA55F);
+    /* Initial gradient */
+    color: #01080E;
+    /* Text color */
+    font-weight: semi-bold;
+    font-size: 1rem;
+    /* Adjust as needed */
+    border: none;
+    border-radius: 25px;
+    /* Rounded corners */
+    transition: transform 0.2s ease-in-out;
+    /* Smooth scaling on hover */
+    animation: Gradient 3s ease infinite;
+    /* Apply the gradient animation */
+    text-decoration: none;
+    /* Remove underline from links */
+    position: relative;
+    overflow: hidden;
+    /* Ensure the pseudo-element doesn't overflow the button bounds */
+}
+
+.moving-gradient-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-size: 200% auto;
+    background-image: inherit;
+    /* Use the same gradient as the parent */
+    pointer-events: none;
+    /* Prevent interaction with the pseudo-element */
+    animation: Gradient 3s ease infinite;
+}
+
+@keyframes Gradient {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.moving-gradient-button:hover {
+    transform: scale(1.05);
+    /* Slightly enlarge the button on hover for feedback */
+}
+
+.active {
+    color: #15BC8B;
+    /* Active route text color */
+}

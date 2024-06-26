@@ -1,0 +1,79 @@
+<div class=" relative isolate overflow-hidden">
+    <!--Title-->
+
+    <div class=" m-auto pt-16 md:pt-32 flex w-[80%] justify-between items-center">
+
+        <h1 class="font-bold break-normal text-[#43D9AD] text-xl md:text-3xl">#{{projectResponse.projectTitle}}</h1>
+
+
+        <a href="{{projectResponse.projectLink}}"
+            class="bg-[#43D9AD] w-44 text-[#010C15] justify-center font-semibold text-center rounded-lg shadow px-8 py-3 flex items-center gap-3"><i
+                class="ri-pages-fill"></i> Preview</a>
+
+    </div>
+
+    <hr class="dark:bg-[#1E2D3D] border-[#1E2D3D] h-0.5">
+
+    <!--image-->
+    <div class=" container w-full max-w-6xl mx-auto bg-white dark:!bg-[#011627] bg-contain bg-no-repeat mt-8 rounded"
+        [style.background-image]="backgroundImageUrl" style=" height: 50vh; width: 100%;"></div>
+
+    <!--Container-->
+    <div class="container max-w-5xl">
+
+        <div class="mx-0 sm:mx-2">
+
+            <div class="pb-4 flex gap-4 flex-shrink flex-wrap mt-5">
+
+                <h3 class=" break-normal text-[#5565E8] text-xl md:text-3xl">#Technology / Skills used in this projects!
+                </h3>
+
+                <div class="flex gap-3 flex-wrap">
+                    <ng-container *ngFor="let skill of projectResponse.skills">
+
+                        <span
+                            class=" text-xl font-semibold border-2 border-[#607B96]  text-[#607B96] px-3 py-2 rounded-full">{{skill}}</span>
+                    </ng-container>
+                </div>
+
+
+            </div>
+
+            <div
+                class="bg-white dark:!bg-[#011627] w-full p-8 md:p-24 text-xl md:text-2xl text-gray-400 leading-normal">
+
+                <!--Post Content-->
+
+                <p>
+                    {{projectResponse.shortDesription}}
+                </p>
+
+
+                <!-- <blockquote class="border-l-4 border-green-500 italic my-8 pl-8 md:pl-12">
+                    Crocodiles are easy. They try to kill and eat you. People are harder. Sometimes they pretend to be
+                    your
+                    friend first.
+                    <br> - Steve Irwin
+                </blockquote> -->
+
+                <!-- <p class="py-6">What's the output?</p>
+                <pre class="bg-gray-900 rounded text-white font-mono text-base p-4">
+    					<code class="break-words whitespace-pre-wrap">
+    let a = 3;
+    let b = new Number(3);
+    let c = 3;
+    
+    console.log(a == b);
+    console.log(a === b);
+    console.log(b === c);
+    					</code>
+    				</pre> -->
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

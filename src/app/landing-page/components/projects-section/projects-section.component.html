@@ -1,0 +1,54 @@
+<section class=" relative isolate overflow-hidden ">
+    <div class="flex justify-between items-center w-full ">
+        <div class="flex w-3/4 items-center lg:gap-6">
+            <div class="font-semibold text-xl text-[#43D9AD]">#Featured Projects</div>
+            <span class="line w-2/3 h-1 bg-gradient-to-r from-[#43D9AD] to-[#011627] rounded-full"></span>
+        </div>
+        <button type="button" class="animated-gradient-text gradient_border  text-right">_view-all <i
+                class="ri-arrow-right-line"></i></button>
+    </div>
+
+    <div class="flex  flex-wrap gap-11 mt-16">
+
+        <ng-container *ngFor="let project of projectData">
+
+            <a (click)="navigateToProject(project._id)"
+                class="flex flex-col group  w-80 border shadow-sm rounded-xl overflow-hidden hover:shadow-lg transition dark:bg-[#011221] dark:!border-[#1E2D3D] dark:shadow-neutral-700/70">
+                <div class=" relative pt-[50%] sm:pt-[60%] lg:pt-[80%]  rounded-t-xl overflow-hidden">
+                    <img class=" size-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-t-xl"
+                        [src]="getprojectImageUrl(project.projectThumnail)" alt="project.projectTitle">
+                </div>
+                <div class="p-4 md:p-5">
+                    <div class="pb-4 flex gap-2 flex-shrink flex-wrap">
+
+                        <ng-container *ngFor="let skill of project.skills">
+
+                            <span
+                                class=" text-xs border-2 border-[#43D9AD] bg-[#43D9AD] text-[#010C15] px-2 py-0.5 rounded-full">{{skill}}</span>
+                        </ng-container>
+
+
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+                        {{project.projectTitle}}
+                    </h3>
+                    <p class="description-limit mt-1 text-gray-500 dark:text-[#607B96] text-ellipsis">
+                        {{project.shortDesription}}
+                    </p>
+
+                    <!-- <a class="mt-2 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-[#1C2B3A] text-white hover:bg-[#263B50] disabled:opacity-50 disabled:pointer-events-none"
+                        href="#">
+                        Go somewhere
+                    </a> -->
+
+                </div>
+            </a>
+        </ng-container>
+
+
+
+
+
+
+    </div>
+</section>

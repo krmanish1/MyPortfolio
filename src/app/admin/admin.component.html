@@ -1,0 +1,45 @@
+<section class="dark:bg-[#01080E] w-full h-[100vh] p-16">
+
+    <div class=" bg-gray-100 dark:bg-[#011627]  flex justify-between p-8 ">
+        <div class="w-64  border-2 dark:border-[#1E2D3D]">
+            <ul class="max-w-xs flex flex-col divide-y divide-gray-200 dark:divide-[#1E2D3D]">
+                <a [routerLink]="['/updation-portal/personal-info']"
+                    routerLinkActive="active dark:!bg-[#607B96] bg-gray-200" href="javascript:void(0)">
+                    <li
+                        class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium text-gray-800 dark:text-gray-300">
+                        Personal-info
+                    </li>
+
+                </a>
+                <a [routerLink]="['/updation-portal/projects-info']"
+                    routerLinkActive="active dark:!bg-[#607B96] bg-gray-200" href="javascript:void(0)">
+                    <li
+                        class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium text-gray-800 dark:text-gray-300">
+                        Projects-info
+                    </li>
+
+                </a>
+                <a [routerLink]="['/updation-portal/skill-info']"
+                    routerLinkActive="active dark:!bg-[#607B96] bg-gray-200" href="javascript:void(0)">
+                    <li
+                        class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium text-gray-800 dark:text-gray-300">
+                        Skill-info
+                    </li>
+
+                </a>
+                <a [routerLink]="['/updation-portal/certificate-info']"
+                    routerLinkActive="active dark:!bg-[#607B96] bg-gray-200" href="javascript:void(0)">
+                    <li
+                        class="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium text-gray-800 dark:text-gray-300">
+                        Certification
+                    </li>
+
+                </a>
+
+            </ul>
+        </div>
+        <div class="w-[100%] border-l-0 border-2 dark:border-[#1E2D3D] h-full">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</section>

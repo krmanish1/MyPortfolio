@@ -1,0 +1,136 @@
+<ng-container *ngIf="type == 'success'">
+    <div class="fixed inset-0 flex items-center justify-center z-50">
+        <div class="bg-white dark:!bg-[#202020] p-4 rounded-lg shadow-lg">
+            <div class="pt-1 pb-4 rounded-t-lg flex justify-between">
+                <h4 class="text-lg font-semibold text-green-600 inline-block">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px"
+                        fill="currentColor" class="text-green-600 inline-block text-center mr-2">
+                        <path
+                            d="M 12 2 C 6.486 2 2 6.486 2 12 C 2 17.514 6.486 22 12 22 C 17.514 22 22 17.514 22 12 C 22 10.874 21.803984 9.7942031 21.458984 8.7832031 L 19.839844 10.402344 C 19.944844 10.918344 20 11.453 20 12 C 20 16.411 16.411 20 12 20 C 7.589 20 4 16.411 4 12 C 4 7.589 7.589 4 12 4 C 13.633 4 15.151922 4.4938906 16.419922 5.3378906 L 17.851562 3.90625 C 16.203562 2.71225 14.185 2 12 2 z M 21.292969 3.2929688 L 11 13.585938 L 7.7070312 10.292969 L 6.2929688 11.707031 L 11 16.414062 L 22.707031 4.7070312 L 21.292969 3.2929688 z" />
+                    </svg>
+                    {{ title }}
+                </h4>
+                <button type="button"
+                    class="text-gray-700 dark:text-gray-300 hover:text-gray-900 text-lg dark:bg-[#303030]"
+                    aria-label="Close" (click)="dismiss()">
+                    <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <div class="pl-2 pr-6 font-bold dark:text-gray-300">
+                {{ message }}
+            </div>
+            <div class="pt-6 rounded-b-lg flex justify-end">
+                <!-- <button type="button" class="text-white bg-red-500 hover:bg-red-600 px-4 py-2 rounded mr-2"
+                    (click)="decline()">{{ btnCancelText }}</button> -->
+                <button type="button" class="text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded"
+                    (click)="accept()">{{ btnOkText }}</button>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="type == 'Warning'">
+    <div class="fixed inset-0 flex items-center justify-center z-50">
+        <div class="bg-white dark:!bg-[#202020] p-4 rounded-lg shadow-lg">
+            <div class="pt-1 pb-4 rounded-t-lg flex justify-between">
+                <h4 class="text-lg font-semibold text-yellow-400 inline-block">
+                    <svg width="24" height="24" class="text-yellow-400 inline-block text-center mr-2"
+                        viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M19.5 12C19.5 16.1421 16.1421 19.5 12 19.5C7.85786 19.5 4.5 16.1421 4.5 12C4.5 7.85786 7.85786 4.5 12 4.5C16.1421 4.5 19.5 7.85786 19.5 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12ZM11.25 13.5V8.25H12.75V13.5H11.25ZM11.25 15.75V14.25H12.75V15.75H11.25Z"
+                            fill="currentColor" />
+                    </svg>
+                    {{ title }}
+                </h4>
+                <button type="button" class="text-gray-700 hover:text-gray-900 text-lg" aria-label="Close"
+                    (click)="dismiss()">
+                    <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <div class="pl-2 pr-6 font-bold dark:text-gray-300">
+                {{ message }}
+            </div>
+            <div class="pt-6 rounded-b-lg flex justify-end">
+                <!-- <button type="button" class="text-white bg-red-500 hover:bg-red-600 px-4 py-2 rounded mr-2"
+                    (click)="decline()">{{ btnCancelText }}</button> -->
+                <button type="button" class="text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded"
+                    (click)="accept()">{{ btnOkText }}</button>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="type == 'delete'">
+    <div class="fixed inset-0 flex items-center justify-center z-50 ">
+        <div class="bg-white dark:!bg-[#202020] p-4 rounded-lg shadow-lg w-96">
+            <div class="pt-1 pb-4 rounded-t-lg flex justify-between">
+                <h4 class="text-lg font-semibold text-red-600 inline-block text-center">
+                    <i class="bi bi-trash3-fill"></i>
+
+                    {{ title }}
+                </h4>
+                <button type="button"
+                    class="text-gray-700 dark:text-gray-300 hover:text-gray-900 h-8 w-8 text-lg border-none outline-none rounded-full bg-gray-100 dark:bg-[#303030]"
+                    aria-label="Close" (click)="dismiss()">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+            <div class="pl-2 pr-6 font-bold dark:text-gray-300">
+                {{ message }}
+            </div>
+            <div class="pt-6 rounded-b-lg flex justify-end">
+                <!-- <button type="button" class="text-white bg-red-500 hover:bg-red-600 px-4 py-2 rounded mr-2"
+                        (click)="decline()">{{ btnCancelText }}</button> -->
+                <button type="button"
+                    class="text-[#07485B] dark:text-gray-300 bg-gray-100 dark:bg-[#303030] hover:bg-gray-300 px-4 py-2 rounded"
+                    (click)="dismiss()">{{btnCancelText}}</button>&nbsp;
+                <button type="button" class="text-white bg-rose-500 hover:bg-rose-600 px-4 py-2 rounded"
+                    (click)="accept()">{{ btnOkText }}</button>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+
+<ng-container *ngIf="type == 'error'">
+    <div class="fixed inset-0 flex items-center justify-center z-50 ">
+        <div class="bg-white dark:!bg-[#202020] p-4 rounded-lg shadow-lg w-96">
+            <div class="pt-1 pb-4 rounded-t-lg flex justify-between">
+                <h4 class="text-lg font-semibold text-red-600 inline-block text-center">
+                    <svg fill="currentColor" class="text-red-600 font-bold inline-block text-center mr-2" width="24px"
+                        height="24px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M520.741 163.801a10.234 10.234 0 00-3.406-3.406c-4.827-2.946-11.129-1.421-14.075 3.406L80.258 856.874a10.236 10.236 0 00-1.499 5.335c0 5.655 4.585 10.24 10.24 10.24h846.004c1.882 0 3.728-.519 5.335-1.499 4.827-2.946 6.352-9.248 3.406-14.075L520.742 163.802zm43.703-26.674L987.446 830.2c17.678 28.964 8.528 66.774-20.436 84.452a61.445 61.445 0 01-32.008 8.996H88.998c-33.932 0-61.44-27.508-61.44-61.44a61.445 61.445 0 018.996-32.008l423.002-693.073c17.678-28.964 55.488-38.113 84.452-20.436a61.438 61.438 0 0120.436 20.436zM512 778.24c22.622 0 40.96-18.338 40.96-40.96s-18.338-40.96-40.96-40.96-40.96 18.338-40.96 40.96 18.338 40.96 40.96 40.96zm0-440.32c-22.622 0-40.96 18.338-40.96 40.96v225.28c0 22.622 18.338 40.96 40.96 40.96s40.96-18.338 40.96-40.96V378.88c0-22.622-18.338-40.96-40.96-40.96z" />
+                    </svg>
+                    {{ title }}
+                </h4>
+                <button type="button"
+                    class="text-gray-700 dark:text-gray-300 hover:text-gray-900 text-lg dark:bg-[#303030]"
+                    aria-label="Close" (click)="dismiss()">
+                    <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <div class="pl-2 pr-6 font-bold dark:text-gray-300">
+                {{ message }}
+            </div>
+            <div class="pt-6 rounded-b-lg flex justify-end">
+                <!-- <button type="button" class="text-white bg-red-500 hover:bg-red-600 px-4 py-2 rounded mr-2"
+                        (click)="decline()">{{ btnCancelText }}</button> -->
+                <button type="button" class="text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded"
+                    (click)="accept()">{{ btnOkText }}</button>
+            </div>
+        </div>
+    </div>
+</ng-container>

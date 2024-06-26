@@ -1,0 +1,75 @@
+.animated-gradient-text {
+    display: inline-block;
+    // padding: 10px;
+    /* Adjust as needed */
+    background-size: 200% auto;
+    /* Double the size of the background image */
+    background-image: linear-gradient(to right, #4D5BCE, #43D9AD, #FEA55F);
+    /* Updated gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    // border: 2px solid linear-gradient(to right, #4D5BCE, #43D9AD, #FEA55F);
+    ;
+    // border-image: linear-gradient(to right, #4D5BCE, #43D9AD, #FEA55F);
+    border-radius: 24px;
+    // padding: 8 8px;
+    /* White border */
+    box-decoration-break: clone;
+    /* Ensures the border follows the text */
+    -webkit-box-decoration-break: clone;
+    /* For WebKit browsers */
+
+    /* Animation */
+    animation: Gradient 3s ease infinite;
+}
+
+@keyframes Gradient {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+
+
+@media screen and (max-width: 680px) {
+    .w-full {
+
+        display: flex;
+        justify-content: space-between;
+
+        .items-center {
+            width: 100%;
+            display: flex;
+            // gap: 1px;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: column;
+
+            .text-xl {
+                font-size: 1rem;
+            }
+
+
+        }
+
+        .gradient_border {
+            width: 100%;
+        }
+    }
+
+    .flex-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .w-72 {
+            width: 24rem;
+        }
+    }
+}

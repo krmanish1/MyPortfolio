@@ -1,0 +1,150 @@
+<nav class="relative px-4 py-4 flex justify-between items-center bg-[#F0F2F5] dark:bg-[#011627]">
+    <!-- <a class="animated-gradient-text text-[16px] font-semibold leading-none" href="javascript:void(0)">
+        manish-kumar </a> -->
+
+    <!-- <div class="animated-gradient-text-wrapper"> -->
+    <a class="animated-gradient-text text-[16px] font-semibold leading-none" href="javascript:void(0)">manish-kumar</a>
+    <!-- </div> -->
+    <div class="lg:hidden">
+        <button class="navbar-burger flex items-center text-[#0740C6] p-3" (click)="toggleMenu()">
+            <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <title>Mobile menu</title>
+                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+            </svg>
+        </button>
+    </div>
+    <ul
+        class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto  lg:items-center lg:w-auto lg:space-x-6">
+        <li><a class="text-sm text-gray-500 hover:text-[#15BC8B] no-underline" href="javascript:void(0)"
+                [routerLink]="['/hello']" routerLinkActive=" active text-[#15BC8B]">_hello</a>
+        </li>
+        <!-- <li class="text-gray-300">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+            </svg>
+        </li> -->
+        <li><a class="text-sm text-gray-500 hover:text-[#15BC8B] no-underline" href="javascript:void(0)"
+                routerLink="/about" routerLinkActive=" active text-[#15BC8B]">_about-me</a></li>
+        <li><a class="text-sm text-gray-500 hover:text-[#15BC8B] no-underline" href="javascript:void(0)"
+                routerLink="/projects" routerLinkActive=" active text-[#15BC8B]">_projects</a></li>
+
+
+    </ul>
+
+    <span class="hidden lg:inline-block">
+        <span class="flex items-center justify-center">
+            <a class="hidden lg:inline-block py-2 px-6 no-underline moving-gradient-button bg-[#43D9AD] hover:bg-[#15BC8B] text-sm text-[#01080E] rounded-xl transition duration-200"
+                href="javascript:void(0)">_let's-talk</a>
+
+            <a #themeToggleBtn id="theme-toggle" href="javascript:void(0)"
+                class="hidden lg:inline-block py-2 px-2 ml-4 text-gray-500 dark:text-gray-400  hover:dark:text-gray-200 hover:bg-gray-200 bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-700 focus:outline-none   dark:focus:ring-gray-700 rounded-lg text-sm ">
+                <svg #themeToggleLightIcon id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="currentColor"
+                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                </svg>
+                <svg #themeToggleDarkIcon id="theme-toggle-light-icon" class="w-5 h-5 hidden" fill="currentColor"
+                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                        fill-rule="evenodd" clip-rule="evenodd"></path>
+                </svg>
+            </a>
+        </span>
+    </span>
+
+
+</nav>
+<div class="navbar-menu relative z-30  hidden dark:bg-gray-900">
+    <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25" (click)="toggleMenu()"></div>
+    <nav
+        class="fixed top-0 left-0 bottom-0 flex flex-col w-[40%] py-6 px-6  dark:bg-gray-900 bg-white border-r overflow-y-auto">
+        <div class="flex items-center mb-8 border-b-2 pb-4 border-b-gray-600">
+            <a class="mr-auto text-3xl font-bold leading-none" href="javascript:void(0)">
+                <svg viewBox="0 0 348 224" fill="currentColor" class="h-8 w-8 text-[#1755E7]"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M104.101 0H150.62L45.8079 224H0L104.101 0Z" fill="currentColor" class="text-[#1755E7]" />
+                    <path d="M116.37 31.8296L150.62 0L235.685 183.132H186.771L116.37 31.8296Z" fill="currentColor"
+                        class="text-[#1755E7]" />
+                    <path d="M200.768 202.563L244.853 202.538L252.832 223.657L209.527 223.682L200.768 202.563Z"
+                        fill="currentColor" class="text-[#1755E7]" />
+                    <path d="M169.126 0L261.729 0.00328195L262.346 48.3981H190.948L169.126 0Z" fill="currentColor"
+                        class="text-[#1755E7]" />
+                    <path d="M109.113 140.135L253.071 140.139V183.639L88.3817 183.636L109.113 140.135Z"
+                        fill="currentColor" class="text-[#1755E7]" />
+                    <path
+                        d="M253.071 183.639V140.139C307.486 134.595 316.589 55.4174 262.346 48.3981L261.729 0.00328195C311.076 0.00328195 348 45.157 348 94.3404C348 142.329 309.849 181.688 261.729 183.342L253.071 183.639Z"
+                        fill="currentColor" class="text-[#1755E7]" />
+                    <defs>
+                        <linearGradient id="paint0_linear_337_813" x1="108.022" y1="11.9628" x2="305.905" y2="224.684"
+                            gradientUnits="userSpaceOnUse">
+                            <stop offset="0.405" stop-color="#F5527A" />
+                            <stop offset="1" stop-color="#FF512A" />
+                        </linearGradient>
+                        <linearGradient id="paint1_linear_337_813" x1="108.022" y1="11.9628" x2="305.905" y2="224.684"
+                            gradientUnits="userSpaceOnUse">
+                            <stop offset="0.405" stop-color="#F5527A" />
+                            <stop offset="1" stop-color="#FF512A" />
+                        </linearGradient>
+                        <linearGradient id="paint2_linear_337_813" x1="108.022" y1="11.9628" x2="305.905" y2="224.684"
+                            gradientUnits="userSpaceOnUse">
+                            <stop offset="0.405" stop-color="#F5527A" />
+                            <stop offset="1" stop-color="#FF512A" />
+                        </linearGradient>
+                        <linearGradient id="paint3_linear_337_813" x1="108.022" y1="11.9628" x2="305.905" y2="224.684"
+                            gradientUnits="userSpaceOnUse">
+                            <stop offset="0.405" stop-color="#F5527A" />
+                            <stop offset="1" stop-color="#FF512A" />
+                        </linearGradient>
+                        <linearGradient id="paint4_linear_337_813" x1="108.022" y1="11.9628" x2="305.905" y2="224.684"
+                            gradientUnits="userSpaceOnUse">
+                            <stop offset="0.405" stop-color="#F5527A" />
+                            <stop offset="1" stop-color="#FF512A" />
+                        </linearGradient>
+                        <linearGradient id="paint5_linear_337_813" x1="108.022" y1="11.9628" x2="305.905" y2="224.684"
+                            gradientUnits="userSpaceOnUse">
+                            <stop offset="0.405" stop-color="#F5527A" />
+                            <stop offset="1" stop-color="#FF512A" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </a>
+            <button class="navbar-close" (click)="toggleMenu()">
+                <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <div>
+            <ul>
+                <li class="mb-1">
+                    <a class="block p-4 text-sm font-semibold text-gray-500 hover:bg-rose-50 dark:hover:bg-gray-700 hover:text-[#0740C6] rounded"
+                        routerLink="/hello" routerLinkActive=" active text-[#15BC8B]"
+                        href="javascript:void(0)">_hello</a>
+                </li>
+                <li class="mb-1">
+                    <a class="block p-4 text-sm font-semibold text-gray-500 hover:bg-rose-50 dark:hover:bg-gray-700 hover:text-[#0740C6] rounded"
+                        routerLink="/about" routerLinkActive=" active text-[#15BC8B]"
+                        href="javascript:void(0)">_about-me</a>
+                </li>
+                <li class="mb-1">
+                    <a class="block p-4 text-sm font-semibold text-gray-500 hover:bg-rose-50 dark:hover:bg-gray-700 hover:text-[#0740C6] rounded"
+                        routerLink="/projects" routerLinkActive=" active text-[#15BC8B]"
+                        href="javascript:void(0)">_projects</a>
+                </li>
+
+
+            </ul>
+        </div>
+        <div class="mt-auto">
+            <div class="pt-6">
+
+                <a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-[#F0F2F5] font-semibold bg-[#0740C6] hover:bg-rose-700  rounded-xl"
+                    href="javascript:void(0)">_let's-talk</a>
+            </div>
+        </div>
+    </nav>
+</div>
