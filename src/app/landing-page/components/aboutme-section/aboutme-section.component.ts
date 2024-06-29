@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 // import Prism from 'prismjs';
 
 @Component({
@@ -16,7 +17,9 @@ export class AboutmeSectionComponent {
 
   dataToShow: any = {};
 
-  constructor() {
+  constructor(
+    private sanitizer: DomSanitizer
+  ) {
 
   }
 
@@ -40,6 +43,11 @@ export class AboutmeSectionComponent {
 
     console.log(" this.dataToShow:-", this.dataToShow);
 
+
+  }
+  parseHTML(value: string) {
+
+    return this.sanitizer.bypassSecurityTrustHtml(value);
 
   }
 

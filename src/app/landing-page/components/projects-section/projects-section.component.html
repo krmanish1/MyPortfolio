@@ -32,8 +32,8 @@
                     <h3 class="text-lg font-bold text-gray-800 dark:text-white">
                         {{project.projectTitle}}
                     </h3>
-                    <p class="description-limit mt-1 text-gray-500 dark:text-[#607B96] text-ellipsis">
-                        {{project.shortDesription}}
+                    <p [innerHTML]="parseHTML(project.shortDesription)"
+                        class="description-limit mt-1 text-gray-500 dark:text-[#607B96] text-ellipsis">
                     </p>
 
                     <!-- <a class="mt-2 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-[#1C2B3A] text-white hover:bg-[#263B50] disabled:opacity-50 disabled:pointer-events-none"

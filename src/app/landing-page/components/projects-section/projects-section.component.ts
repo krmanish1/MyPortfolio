@@ -4,6 +4,7 @@ import { DialogboxService } from '../../../Dialogbox/services/dialogbox.service'
 import { environment } from '../../../../environments/environment.development';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-projects-section',
@@ -18,7 +19,8 @@ export class ProjectsSectionComponent implements OnInit {
   constructor(
     private apiService: ApiService,
     private confirmationDialogService: DialogboxService,
-    private router: Router
+    private router: Router,
+    private sanitizer: DomSanitizer
   ) { }
 
   ngOnInit(): void {
@@ -68,6 +70,12 @@ export class ProjectsSectionComponent implements OnInit {
     console.log("_id", projectId);
 
     this.router.navigate(['/get-projects-details', projectId]);
+  }
+
+  parseHTML(value: string) {
+
+    return this.sanitizer.bypassSecurityTrustHtml(value);
+
   }
 
 }

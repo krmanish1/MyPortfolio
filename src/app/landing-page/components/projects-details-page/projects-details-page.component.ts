@@ -5,13 +5,14 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { environment } from '../../../../environments/environment.development';
 import { firstValueFrom } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-projects-details-page',
   standalone: true,
-  imports: [CommonModule],
   templateUrl: './projects-details-page.component.html',
-  styleUrl: './projects-details-page.component.scss'
+  styleUrl: './projects-details-page.component.scss',
+  imports: [CommonModule, FooterComponent]
 })
 export class ProjectsDetailsPageComponent implements OnInit {
 
@@ -60,6 +61,12 @@ export class ProjectsDetailsPageComponent implements OnInit {
     const baseUrl = 'http://localhost:3000/';
     // const baseUrl = 'https://modmind-server.onrender.com/';
     return `url(${baseUrl}${formattedPath})`;
+  }
+
+  parseHTML(value: string) {
+
+    return this.sanitizer.bypassSecurityTrustHtml(value);
+
   }
 
 

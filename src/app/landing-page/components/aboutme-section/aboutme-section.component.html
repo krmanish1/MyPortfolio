@@ -13,8 +13,10 @@
     <div class="flex gap-6 justify-between about-me w-full flex-wrap mt-16">
 
         <div class=" about-text dark:text-gray-300 lg:!w-1/2 sm:!w-full flex flex-col gap-3">
-            <p class="w-full">
-                {{dataToShow.selfinto}}...<span class="text-blue-400 cursor-pointer">ReadMore</span>
+            <p [innerHTML]="parseHTML(dataToShow.selfinto)" class="w-full">
+
+                <!-- {{parseHTML(dataToShow.selfinto)}} -->
+                <span class="text-blue-400 cursor-pointer">ReadMore</span>
             </p>
         </div>
 

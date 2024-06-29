@@ -1,7 +1,7 @@
-<div class=" relative isolate overflow-hidden">
+<div class=" relative isolate overflow-hidden mb-8">
     <!--Title-->
 
-    <div class=" m-auto pt-16 md:pt-32 flex w-[80%] justify-between items-center">
+    <div class=" m-auto pt-16 md:pt-32 flex w-[90%] justify-between items-center">
 
         <h1 class="font-bold break-normal text-[#43D9AD] text-xl md:text-3xl">#{{projectResponse.projectTitle}}</h1>
 
@@ -25,14 +25,15 @@
 
             <div class="pb-4 flex gap-4 flex-shrink flex-wrap mt-5">
 
-                <h3 class=" break-normal text-[#5565E8] text-xl md:text-3xl">#Technology / Skills used in this projects!
+                <h3 class=" break-normal text-[#5565E8] lg:text-xl md:text-3xl">#Technology / Skills used in this
+                    projects!
                 </h3>
 
                 <div class="flex gap-3 flex-wrap">
                     <ng-container *ngFor="let skill of projectResponse.skills">
 
                         <span
-                            class=" text-xl font-semibold border-2 border-[#607B96]  text-[#607B96] px-3 py-2 rounded-full">{{skill}}</span>
+                            class=" text-sm font-semibold border-2 border-[#607B96]  text-[#607B96] px-3 py-2 rounded-full">{{skill}}</span>
                     </ng-container>
                 </div>
 
@@ -40,12 +41,15 @@
             </div>
 
             <div
-                class="bg-white dark:!bg-[#011627] w-full p-8 md:p-24 text-xl md:text-2xl text-gray-400 leading-normal">
+                class="bg-white dark:!bg-[#011627] w-full lg:p-1 md:p-24 lg:text-xl md:text-2xl text-gray-400 leading-normal">
 
                 <!--Post Content-->
 
-                <p>
-                    {{projectResponse.shortDesription}}
+                <p [innerHTML]="parseHTML(projectResponse.shortDesription)">
+                    <!-- {{projectResponse.shortDesription | safehtml}} -->
+
+
+
                 </p>
 
 
@@ -77,3 +81,5 @@
 
     </div>
 </div>
+
+<app-footer></app-footer>
