@@ -1,4 +1,4 @@
 export const environment = {
     development: false,
-    BASE_URL: "/",
+    BASE_URL: "https://myportfolio-server-ztte.onrender.com",
 };
