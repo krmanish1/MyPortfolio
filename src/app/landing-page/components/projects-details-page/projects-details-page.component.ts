@@ -59,7 +59,7 @@ export class ProjectsDetailsPageComponent implements OnInit {
     // Encode the path if necessary
     // formattedPath = encodeURIComponent(formattedPath);
     // const baseUrl = 'http://localhost:3000/';
-    const baseUrl = 'https://modmind-server.onrender.com/';
+    const baseUrl = 'https://myportfolio-server-ztte.onrender.com/';
     return `url(${baseUrl}${formattedPath})`;
   }
 
