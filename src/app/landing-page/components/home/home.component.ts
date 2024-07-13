@@ -1,5 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ProjectsSectionComponent } from "../projects-section/projects-section.component";
+import { LandingpageService } from '../../services/landingpage.service';
+import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { DevelopmentResumeComponent } from '../../../development-resume/development-resume.component';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +19,10 @@ export class HomeComponent implements OnInit {
 
   dataToShow: any = {};
 
-  constructor() {
+  constructor(
+    private landingpageservices: LandingpageService,
+    private serviceModal: NgbModal,
+  ) {
 
   }
 
@@ -50,4 +56,34 @@ export class HomeComponent implements OnInit {
     return `http://localhost:3000/${imagePath}`;
   }
 
+
+
+  getResume() {
+    this.landingpageservices.modalInstance = this.serviceModal.open(
+      DevelopmentResumeComponent,
+      {
+        windowClass: "modal-35",
+        // backdrop: "static", // Disables closing the modal by clicking the backdrop
+        keyboard: true, // Disables closing the modal by pressing the ESC key
+        centered: true
+      },
+    );
+
+    this.landingpageservices.modalInstance.result.then(
+      () => {
+        // Handle modal dismissal here
+        console.log('Modal dismissed with OK');
+      },
+      (reason) => {
+        if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+          // Handle backdrop click here
+          console.log('Modal dismissed by clicking outside');
+        } else {
+          // Handle other dismissal reasons here
+          console.log('Modal dismissed with other reason:', reason);
+        }
+      }
+    );
+  }
 }
+

@@ -1,0 +1,276 @@
+<!-- <div class="bg-gray-100 font-class" style="font-family:sans-serif !important;"> -->
+
+<div class="flex justify-between mx-4 my-8 items-center">
+    <h2 class="text-xl font-semibold mb-2">My Resume </h2>
+    <button class="Btn" (click)="downloadAsPdf()">
+        <svg class="svgIcon" viewBox="0 0 384 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z">
+            </path>
+        </svg>
+        <span class="icon2"></span>
+        <span class="tooltip">Download</span>
+    </button>
+</div>
+
+<hr class="mx-6">
+
+<div class="container mx-auto py-8 px-4">
+    <div #dataToExport id="contentToConvert" class="bg-white p-4">
+        <div class="text-center mt-6">
+            <h1 class="text-3xl font-semibold">Manish Kumar</h1>
+            <p class="text-gray-600">
+                <span> <a href="tel:7667659336" class="text-gray-600"><i class="ri-phone-fill"></i> +91
+                        7667659336</a> </span> |
+                <span> <a href="mailto:manish05401@gmail.com" class="text-gray-600"><i class="ri-mail-open-fill"></i>
+                        manish05401&#64;gmail.com</a> </span> |
+                <span><a href="https://github.com/krmanish1" class="text-gray-600" target="_blank"><i
+                            class="ri-github-fill"></i>
+                        &#64;krmanish1</a></span> |
+                <span><a href="https://www.linkedin.com/in/manish05401/" class="text-gray-600 " target="_blank"><i
+                            class="ri-linkedin-box-fill"></i>
+                        &#64;manish05401</a></span> |
+                <span><a href="https://krmanish11.netlify.app/" class="text-gray-600 " target="_blank"><i
+                            class="ri-earth-line"></i>
+                        Portfolio</a></span>
+            </p>
+        </div>
+
+        <hr class="my-4">
+
+        <div class="text-[14px]">
+            <h2 class="text-[16px] font-semibold mb-2">Skills Summary</h2>
+            <!-- <hr class="my-4"> -->
+
+            <ul class="">
+                <li class="list-disc">
+                    <p class="text-gray-700"><span class="font-semibold">Technical Expertise: </span> Angular,
+                        JavaScript, TypeScript,
+                        NodeJs, MongoDB CSS, and HTML, with a strong foundation in Fullstack development and UI/UX
+                        design.</p>
+                </li>
+                <li class="list-disc">
+                    <p class="text-gray-700"><span class="font-semibold">Design Tools: </span> Skilled in using
+                        Figma for UI/UX design, demonstrating a keen eye for aesthetics and user experience.</p>
+                </li>
+                <li class="list-disc">
+                    <p class="text-gray-700"><span class="font-semibold">Project Experience: </span> Developed a
+                        Fullstack web application, showcasing the ability to create engaging and
+                        functional applications using modern web technologies.</p>
+                </li>
+                <li class="list-disc">
+                    <p class="text-gray-700"><span class="font-semibold">Educational Background: </span> Recentely
+                        Completed my Graduation Bachelor's of Computer Applications at SAITM.</p>
+                </li>
+
+                <li class="list-disc">
+                    <p class="text-gray-700"><span class="font-semibold">Continuous Learning: </span> Committed to
+                        continuous improvement and learning in the field of web development and design.</p>
+                </li>
+                <li class="list-disc">
+                    <p class="text-gray-700"><span class="font-semibold">Certifications: </span> Holds
+                        certifications in HTML5 & CSS3, UX Design, and UI Design from reputable platforms like Udemy
+                        and Growth School.</p>
+                </li>
+                <li class="list-disc">
+                    <p class="text-gray-700"><span class="font-semibold">Adobe Designathon: </span> Attended adobe
+                        designathon and participated in making a app on provided problem statement.</p>
+                </li>
+            </ul>
+        </div>
+
+        <hr class="my-4">
+
+
+        <div class="text-[14px]">
+            <h2 class="text-[16px] font-semibold mt-4 mb-2">Work Experience</h2>
+
+            <div class="flex justify-between">
+                <h2 class="text-[14px] font-semibold ">Trainee-Software Engineer</h2>
+                <h2 class="text-[14px] font-semibold ">AUG 2023</h2>
+
+            </div>
+            <!-- <p class="text-gray-700">Developed and maintained company website, implementing responsive design and
+                    optimizing performance. Collaborated with the design team to create visually appealing web pages.
+                </p> -->
+            <p class="text-gray-700">As a Frontend Developer at Opkey, I played a key role in crafting responsive
+                and visually engaging web applications
+                using Angular and Kendo UI. My responsibilities included integrating APIs seamlessly, optimizing
+                application performance, and Developed and maintained company website, implementing responsive
+                design and
+                optimizing performance. Collaborated with the design team to create visually appealing web pages.
+            </p>
+
+        </div>
+
+        <hr class="my-4">
+        <div class="text-[14px]">
+            <h2 class="text-[16px] font-semibold mt-4 mb-2">Projects</h2>
+
+            <ul class="list-disc">
+                <li>
+                    <div class="flex justify-between">
+                        <a href="https://quick-notes-two.vercel.app/" class="text-gray-600" target="_blank">
+                            <h2 class="text-[14px] font-semibold ">QuickNotes <i class="ri-external-link-line"></i></h2>
+                        </a>
+                        <h2 class="text-[14px] font-semibold ">MAY 2024</h2>
+                    </div>
+                    <p class="text-gray-700">Developed a Quick Note web app with Angular and Node.js, allowing users
+                        to
+                        create sticky notes, write journals, and
+                        draw, while ensuring security measures and an
+                        intuitive design for a seamless user experience. Additionally, include functionality for
+                        downloading
+                        handwritten notes
+                        and drawings. This project is under development.
+                    </p>
+                </li>
+
+                <li>
+                    <div class="flex justify-between">
+                        <h2 class="text-[14px] font-semibold "> <a href="https://adswise.netlify.app/"
+                                class="text-gray-600" target="_blank">Adwise <i class="ri-external-link-line"></i></a>
+                        </h2>
+                        <h2 class="text-[14px] font-semibold ">MAR 2024</h2>
+                    </div>
+                    <p class="text-gray-700">I have developed marketing agency website showcases our services,
+                        client successes, and expertise in driving results. It
+                        features a user-friendly interface with clear calls-
+                        to-action for potential clients to contact us or inquire about services. Additionally, the
+                        admin panel integrates robust
+                        authentication and authorization mechanisms to
+                        secure access and manage sensitive data effectively.
+                    </p>
+                </li>
+
+                <li>
+                    <div class="flex justify-between">
+                        <h2 class="text-[14px] font-semibold "><a
+                                href=" https://krmanish1.github.io/github_user_profile_search/" class="text-gray-600"
+                                target="_blank">GitHub User Profile Search <i class="ri-external-link-line"></i></a>
+                        </h2>
+                        <h2 class="text-[14px] font-semibold ">JUN 2023</h2>
+                    </div>
+                    <p class="text-gray-700">I have developed a tool that searches for GitHub user profile
+                        information. I have used the fetch API to retrieve the
+                        user's information and used the Dom API to alter the
+                        elements to display the information on UI. I have used HTML, CSS and JavaScript to develop
+                        this tool.
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+        <hr class="my-4">
+        <div class="text-[14px]">
+            <h2 class="text-[16px] font-semibold mt-4 mb-2">Skills</h2>
+
+            <div class="flex justify-between">
+                <ul class=" text-gray-700 list-disc leading-3 flex gap-7 flex-wrap">
+                    <li>Angular</li>
+                    <li>JavaScript</li>
+                    <li>Node.js</li>
+                    <li>HTML/CSS</li>
+                    <li>Tailwindcss</li>
+                    <li>Responsive Web Design</li>
+                    <li>Figma (software) </li>
+                    <li>Prototyping</li>
+                    <li>Autolayout</li>
+                    <li>User Interface Design (UI)</li>
+                    <li>User Experience Design (UX)</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <hr class="my-4">
+        <div class="text-[14px] ">
+            <h2 class="text-[16px] font-semibold mt-4 mb-2">Education</h2>
+
+            <ul class="list-disc flex gap-2 flex-col">
+                <li>
+                    <div class="flex justify-between">
+                        <h2 class="text-[14px] font-semibold ">BACHELOR'S OF COMPUTER APPLICATION (BCA) (SAITM)
+                        </h2>
+                        <h2 class="text-[14px] font-semibold ">2020 - 2023</h2>
+                    </div>
+                    <p class="text-gray-700">Overall percentage: 78.50%.
+                    </p>
+                </li>
+
+                <li>
+                    <div class="flex justify-between">
+                        <h2 class="text-[14px] font-semibold ">INTERMEDIATE (TERESA INTERNATIONAL ACADEMY, PATNA)
+                        </h2>
+                        <h2 class="text-[14px] font-semibold ">2018 - 2020</h2>
+                    </div>
+                    <p class="text-gray-700">Percentage: 77.20%.
+                    </p>
+                </li>
+
+                <li>
+                    <div class="flex justify-between">
+                        <h2 class="text-[14px] font-semibold ">MATRICULATION (THE RAMAKRISHNA VIVEKANANDA
+                            VIDYAMANDIR, JHARKHAND) </h2>
+                        <h2 class="text-[14px] font-semibold ">2017 - 2018</h2>
+                    </div>
+                    <p class="text-gray-700">Percentage: 88.00%.
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+        <hr class="my-4">
+        <div class="text-[14px]">
+            <h2 class="text-[16px] font-semibold mt-4 mb-2">Achivements</h2>
+
+            <ul class="list-disc leading-4.2">
+                <li>
+
+                    <p class="text-gray-700">Learn HTML5 & CSS3 from scratch and code with Visual Studio (Udemy) in
+                        DEC 2022.
+                    </p>
+                </li>
+
+                <li>
+
+                    <p class="text-gray-700">UX Design Kickstarter Workshop (Growth School) in SEP 2022.
+                    </p>
+                </li>
+
+                <li>
+
+                    <p class="text-gray-700">UI Design Kickstarter Workshop (Growth School) in SEP 2022.
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+
+        <hr class="my-4">
+        <div class="text-[14px]">
+            <h2 class="text-[16px] font-semibold mt-4 mb-2">Extracurricular</h2>
+
+            <ul class="list-disc leading-4.2">
+                <li>
+
+                    <p class="text-gray-700">Secured third place in a painting competition, showcasing creativity
+                        and artistic talent.
+                    </p>
+                </li>
+
+                <li>
+
+                    <p class="text-gray-700">Participated in extempore competitions, demonstrating quick thinking
+                        and effective communication skills..
+                    </p>
+                </li>
+
+
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<!-- </div> -->

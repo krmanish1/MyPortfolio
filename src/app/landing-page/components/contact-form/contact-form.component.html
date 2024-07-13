@@ -1,4 +1,4 @@
-<div class="my-20 dark:bg-[#011627] ">
+<div id="contactSection" class="my-20 dark:bg-[#011627] ">
     <div class="flex justify-between items-center w-full contact-heading hidden">
         <div class="flex w-3/4 items-center lg:gap-6">
             <div class="font-semibold text-xl text-[#43D9AD]">#contact me</div>
@@ -19,23 +19,48 @@
                 hesitate to contact me
             </p>
 
-            <form action="" class="lg:w-2/3 w-full lg:px-0 lg:mx-auto contact-form">
+            <form [formGroup]="messageForm" (ngSubmit)=" submitMessage()"
+                class="lg:w-2/3 w-full lg:px-0 lg:mx-auto contact-form">
                 <div class="pb-2 pt-4 w-full">
-                    <input type="name" name="name" id="name" placeholder="Name"
-                        class="block w-full p-4 text-lg rounded-sm bg-[#011221] lg:bg-[#011627]">
+                    <input type="name" name="name" id="name" placeholder="Name" formControlName="name"
+                        class="block w-full p-3 text-lg rounded-sm bg-[#011221] lg:bg-[#011627]">
+
+                    <div *ngIf="messageForm.controls['name'].invalid && messageForm.controls['name'].touched"
+                        class="mt-2 text-sm text-red-600" role="alert">
+                        <div *ngIf="messageForm.controls['name'].errors?.['required']">Name is
+                            required.</div>
+                    </div>
                 </div>
                 <div class="pb-2 pt-4 w-full">
-                    <input class="block w-full p-4 text-lg rounded-sm bg-[#011221]  lg:bg-[#011627]" type="email"
-                        name="email" id="email" placeholder="Email">
+                    <input class="block w-full p-3 text-lg rounded-sm bg-[#011221]  lg:bg-[#011627]" type="email"
+                        formControlName="email" name="email" id="email" placeholder="Email">
+
+                    <div *ngIf="messageForm.controls['email'].invalid && messageForm.controls['email'].touched"
+                        class="mt-2 text-sm text-red-600" role="alert">
+                        <div *ngIf="messageForm.controls['email'].errors?.['required']">Email is
+                            required.</div>
+                        <div *ngIf="messageForm.controls['email'].errors?.['invalidFormat']">Please enter
+                            a valid email address.</div>
+                    </div>
                 </div>
                 <div class="pb-2 pt-4 w-full">
                     <textarea class="block w-full p-4 text-lg rounded-sm bg-[#011221]  lg:bg-[#011627]" name="message"
-                        id="message" placeholder="Feedback...."></textarea>
+                        formControlName="message" id="message" placeholder="Feedback...."></textarea>
                 </div>
 
                 <div class=" pt-4 w-full">
                     <button
-                        class="block rounded-lg lg:w-full text-[16px] bg-[#75ddbe] hover:bg-[#3C9D93] border-2 border-[#75ddbe] py-4 px-7 text-center align-middle text-[#011627] shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-green-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none focus:outline-none">Send</button>
+                        class="bg-[#43D9AD] font-semibold text-[18px] hover:bg-[#5bf1c4] text-[#010C15] w-full justify-center text-center  rounded-lg shadow px-10 py-3 flex items-center">
+                        <i class="ri-send-plane-fill"></i>&nbsp; Submit</button>
+                </div>
+
+                <!-- Error Message Display -->
+                <div *ngIf="errorMSG" class="mt-4 alert alert-danger">
+                    {{ errorMSG }}
+                </div>
+                <!-- success Message Display -->
+                <div *ngIf="succesMSG" class="mt-4 alert alert-success">
+                    {{ succesMSG }}
                 </div>
 
 
