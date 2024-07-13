@@ -27,8 +27,8 @@
         </li> -->
         <li><a class="text-sm text-gray-500 hover:text-[#15BC8B] no-underline" href="javascript:void(0)"
                 routerLink="/about" routerLinkActive=" active text-[#15BC8B]">_about-me</a></li>
-        <li><a class="text-sm text-gray-500 hover:text-[#15BC8B] no-underline" href="javascript:void(0)"
-                routerLink="/projects" routerLinkActive=" active text-[#15BC8B]">_projects</a></li>
+        <!-- <li><a class="text-sm text-gray-500 hover:text-[#15BC8B] no-underline" href="javascript:void(0)"
+                routerLink="/projects" routerLinkActive=" active text-[#15BC8B]">_projects</a></li> -->
 
 
     </ul>
@@ -36,9 +36,9 @@
     <span class="hidden lg:inline-block">
         <span class="flex items-center justify-center">
             <a class="hidden lg:inline-block py-2 px-6 no-underline moving-gradient-button bg-[#43D9AD] hover:bg-[#15BC8B] text-sm text-[#01080E] rounded-xl transition duration-200"
-                href="javascript:void(0)">_let's-talk</a>
+                href="javascript:void(0)" (click)="scrollToContactSection()">_let's-talk</a>
 
-            <a #themeToggleBtn id="theme-toggle" href="javascript:void(0)"
+            <!-- <a #themeToggleBtn id="theme-toggle" href="javascript:void(0)"
                 class="hidden lg:inline-block py-2 px-2 ml-4 text-gray-500 dark:text-gray-400  hover:dark:text-gray-200 hover:bg-gray-200 bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-700 focus:outline-none   dark:focus:ring-gray-700 rounded-lg text-sm ">
                 <svg #themeToggleLightIcon id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="currentColor"
                     viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -50,7 +50,7 @@
                         d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
                         fill-rule="evenodd" clip-rule="evenodd"></path>
                 </svg>
-            </a>
+            </a> -->
         </span>
     </span>
 
@@ -61,7 +61,7 @@
     <nav
         class="fixed top-0 left-0 bottom-0 flex flex-col w-[40%] py-6 px-6  dark:bg-gray-900 bg-white border-r overflow-y-auto">
         <div class="flex items-center mb-8 border-b-2 pb-4 border-b-gray-600">
-            <a class="mr-auto text-3xl font-bold leading-none" href="javascript:void(0)">
+            <!-- <a class="mr-auto text-3xl font-bold leading-none" href="javascript:void(0)">
                 <svg viewBox="0 0 348 224" fill="currentColor" class="h-8 w-8 text-[#1755E7]"
                     xmlns="http://www.w3.org/2000/svg">
                     <path d="M104.101 0H150.62L45.8079 224H0L104.101 0Z" fill="currentColor" class="text-[#1755E7]" />
@@ -109,7 +109,11 @@
                         </linearGradient>
                     </defs>
                 </svg>
-            </a>
+            </a> -->
+
+            <a class="animated-gradient-text text-[16px] font-semibold leading-none"
+                href="javascript:void(0)">manish-kumar</a>
+
             <button class="navbar-close" (click)="toggleMenu()">
                 <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg"
                     fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -130,11 +134,11 @@
                         routerLink="/about" routerLinkActive=" active text-[#15BC8B]"
                         href="javascript:void(0)">_about-me</a>
                 </li>
-                <li class="mb-1">
+                <!-- <li class="mb-1">
                     <a class="block p-4 text-sm font-semibold text-gray-500 hover:bg-rose-50 dark:hover:bg-gray-700 hover:text-[#0740C6] rounded"
                         routerLink="/projects" routerLinkActive=" active text-[#15BC8B]"
                         href="javascript:void(0)">_projects</a>
-                </li>
+                </li> -->
 
 
             </ul>
@@ -142,8 +146,8 @@
         <div class="mt-auto">
             <div class="pt-6">
 
-                <a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-[#F0F2F5] font-semibold bg-[#0740C6] hover:bg-rose-700  rounded-xl"
-                    href="javascript:void(0)">_let's-talk</a>
+                <a class="hidden lg:inline-block py-2 px-6 no-underline moving-gradient-button bg-[#43D9AD] hover:bg-[#15BC8B] text-sm text-[#01080E] rounded-xl transition duration-200"
+                    href="javascript:void(0)" (click)="scrollToContactSection()">_let's-talk</a>
             </div>
         </div>
     </nav>
