@@ -4,8 +4,8 @@
             <div class="font-semibold text-xl text-[#43D9AD]">#Featured Projects</div>
             <span class="line w-2/3 h-1 bg-gradient-to-r from-[#43D9AD] to-[#011627] rounded-full"></span>
         </div>
-        <button type="button" class="animated-gradient-text gradient_border  text-right">_view-all <i
-                class="ri-arrow-right-line"></i></button>
+        <!-- <button type="button" class="animated-gradient-text gradient_border  text-right">_view-all <i
+                class="ri-arrow-right-line"></i></button> -->
     </div>
 
     <div class="flex  flex-wrap gap-11 mt-16">
@@ -19,12 +19,12 @@
                         [src]="getprojectImageUrl(project.projectThumnail)" alt="project.projectTitle">
                 </div>
                 <div class="p-4 md:p-5">
-                    <div class="pb-4 flex gap-2 flex-wrap">
+                    <div class="pb-4 flex !justify-start !items-start gap-2 flex-wrap">
 
                         <ng-container *ngFor="let skill of project.skills">
 
                             <span
-                                class=" text-xs border-2 border-[#124345]  text-[#259ca0] px-2 py-1 rounded-md capitalize">{{skill}}</span>
+                                class=" text-xs bg-[#444512]  text-[#a09625] px-2 py-1 rounded-md capitalize">{{skill}}</span>
                         </ng-container>
 
 
