@@ -1,9 +1,6 @@
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { ChangeDetectorRef, Component, ElementRef, Inject, OnInit, PLATFORM_ID, Renderer2, ViewChild } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { LandingpageService } from '../../../landing-page/services/landingpage.service';
-import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { ContactFormComponent } from '../../../landing-page/components/contact-form/contact-form.component';
 
 @Component({
   selector: 'app-navbar',
@@ -24,8 +21,7 @@ export class NavbarComponent implements OnInit {
     @Inject(DOCUMENT) private document: Document,
     // private scrollService: ServiceService,
     private cdr: ChangeDetectorRef,
-    private landingpageservices: LandingpageService,
-    private serviceModal: NgbModal,
+    // private serviceModal: NgbModal
   ) { }
 
   ngOnInit(): void {
@@ -121,9 +117,14 @@ export class NavbarComponent implements OnInit {
 
 
 
+  // scrollToContactSection(): void {
+  //   const contactSection = this.el.nativeElement.querySelector('#contactSection');
+  //   console.log("contactSection", contactSection);
+
+  //   this.renderer.listen('window', 'scroll', () => {
+  //     window.scrollTo({ top: contactSection.offsetTop, behavior: 'smooth' });
+  //   });
+  // }
 
 
 }
-
-
-
