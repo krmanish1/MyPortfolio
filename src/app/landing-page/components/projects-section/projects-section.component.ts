@@ -61,7 +61,8 @@ export class ProjectsSectionComponent implements OnInit {
     // Encode the path if necessary
     formattedPath = encodeURIComponent(formattedPath);
     // return formattedPath;
-    return `http://localhost:3000/${imagePath}`;
+    // return `http://localhost:3000/${imagePath}`;
+    return `https://modmind-server.onrender.com/${imagePath}`;
   }
 
 

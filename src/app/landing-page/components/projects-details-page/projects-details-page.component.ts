@@ -58,8 +58,8 @@ export class ProjectsDetailsPageComponent implements OnInit {
     let formattedPath = this.projectResponse?.projectThumnail.replace(/\\/g, '/');
     // Encode the path if necessary
     // formattedPath = encodeURIComponent(formattedPath);
-    const baseUrl = 'http://localhost:3000/';
-    // const baseUrl = 'https://modmind-server.onrender.com/';
+    // const baseUrl = 'http://localhost:3000/';
+    const baseUrl = 'https://modmind-server.onrender.com/';
     return `url(${baseUrl}${formattedPath})`;
   }
 

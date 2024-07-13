@@ -52,8 +52,8 @@ export class HomeComponent implements OnInit {
   }
 
   getImageUrl(imagePath: string): string {
-    // return `https://modmind-server.onrender.com/${imagePath}`;
-    return `http://localhost:3000/${imagePath}`;
+    return `https://modmind-server.onrender.com/${imagePath}`;
+    // return `http://localhost:3000/${imagePath}`;
   }
 
 
