@@ -55,13 +55,20 @@
                 </div>
 
                 <!-- Error Message Display -->
-                <div *ngIf="errorMSG" class="mt-4 alert alert-danger">
+                <!-- <div *ngIf="errorMSG" class="mt-4 alert alert-danger">
                     {{ errorMSG }}
-                </div>
-                <!-- success Message Display -->
-                <div *ngIf="succesMSG" class="mt-4 alert alert-success">
-                    {{ succesMSG }}
-                </div>
+                </div> -->
+
+                <ng-container>
+
+
+                    <div *ngIf="succesMSG.success === true" class="mt-4 alert alert-success">
+                        {{ succesMSG.message }}
+                    </div>
+                    <div *ngIf="succesMSG.success === false" class="mt-4 alert alert-danger">
+                        {{ succesMSG.message }}
+                    </div>
+                </ng-container>
 
 
             </form>

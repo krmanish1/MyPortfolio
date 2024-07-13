@@ -17,6 +17,7 @@ export class ContactFormComponent implements OnInit {
   messageForm!: FormGroup;
   errorMSG: any;
   succesMSG: any;
+  serverresponse: any;
 
 
   constructor(
@@ -78,7 +79,9 @@ export class ContactFormComponent implements OnInit {
         (response) => {
           console.log("formsubmitresponse:-", response);
 
-          this.succesMSG = response.message
+          this.succesMSG = response
+          this.serverresponse = response.success
+
         }, (error) => {
 
           console.log("formsubmiterror:-", error);
@@ -88,6 +91,7 @@ export class ContactFormComponent implements OnInit {
     }
   }
 
+  //  contactSection = this.el.nativeElement.querySelector('#contactSection');
 
 
 }
